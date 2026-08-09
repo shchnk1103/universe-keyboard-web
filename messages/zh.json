@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "siteName": "Universe Keyboard",
+    "homeTitle": "Universe Keyboard — 接近原生的 iOS 中文输入法",
+    "homeDescription": "由 RIME 驱动的 iOS 第三方中文输入法。安静、精准、隐私可控。",
+    "featuresTitle": "功能 — Universe Keyboard",
+    "featuresDescription": "原生感键盘、RIME 方案、全键盘与九宫格、本地智能与隐私设计。",
+    "getStartedTitle": "开始使用 — Universe Keyboard",
+    "getStartedDescription": "安装并启用 Universe Keyboard 的分步指南。",
+    "privacyTitle": "隐私政策 — Universe Keyboard",
+    "privacyDescription": "Universe Keyboard 如何处理输入与数据。",
+    "aboutTitle": "关于 — Universe Keyboard",
+    "aboutDescription": "项目背景、开源许可与致谢。",
+    "changelogTitle": "更新日志 — Universe Keyboard",
+    "changelogDescription": "产品与工程更新记录。"
+  },
+  "nav": {
+    "features": "功能",
+    "getStarted": "开始使用",
+    "changelog": "更新",
+    "about": "关于",
+    "privacy": "隐私",
+    "download": "即将上架",
+    "github": "GitHub"
+  },
+  "footer": {
+    "tagline": "接近原生的中文输入。",
+    "product": "产品",
+    "resources": "资源",
+    "legal": "法律",
+    "rights": "保留所有权利。",
+    "syncNote": "隐私与更新日志可从主仓库同步。"
+  },
+  "home": {
+    "badge": "iOS · RIME · 本地优先",
+    "heroTitle": "接近原生的\n中文输入。",
+    "heroSubtitle": "Universe Keyboard 是一款由 RIME 驱动的 iOS 第三方中文输入法。安静、精准，尽量像系统键盘一样不打扰你。",
+    "ctaPrimary": "即将上架 App Store",
+    "ctaSecondary": "查看功能",
+    "ctaHint": "下载链接占位 · 上架后将在此更新",
+    "pillarsTitle": "为日常输入而设计",
+    "pillarsSubtitle": "不是堆功能的热闹键盘，而是尽量接近系统体验、又保留 RIME 深度的输入工具。",
+    "pillar1Title": "原生感体验",
+    "pillar1Body": "布局、触感与候选交互贴近 iOS 系统键盘。全键盘与九宫格都认真做，而不是套一层皮肤。",
+    "pillar2Title": "输入留在设备上",
+    "pillar2Body": "按键与组字默认在本地完成。不卖数据、不做广告追踪。完全访问的用途写清楚，可被理解、可被关闭相关能力。",
+    "pillar3Title": "RIME 的深度",
+    "pillar3Body": "雾凇拼音等方案、模糊音、用户词典与可配置行为——把桌面端熟悉的 RIME 能力，落到 iOS 的约束里。",
+    "showcaseTitle": "安静的界面，认真的细节",
+    "showcaseBody": "主 App 像系统设置一样克制；键盘扩展则对齐原生键盘的节奏与可读性。真机截图与录屏将随后替换此处占位。",
+    "showcasePlaceholder": "真机截图 / 录屏占位",
+    "showcaseNote": "浅色 · 深色 · 全键盘 · 九宫格",
+    "trustTitle": "第三方键盘，信任要摆在明处",
+    "trust1Title": "无广告、无账号墙",
+    "trust1Body": "不做跨 App 追踪，不把输入法做成广告位。",
+    "trust2Title": "完全访问用途透明",
+    "trust2Body": "用于共享配置、本地词库与可选能力——不是用来上传击键。",
+    "trust3Title": "开源与可审计",
+    "trust3Body": "核心工程以 MIT 开源；上游 RIME / 方案许可证在应用内与站点中说明。",
+    "ctaBandTitle": "准备好换一种更安静的输入方式？",
+    "ctaBandBody": "App Store 链接就绪后将出现在这里。你也可以先阅读功能说明与启用步骤。",
+    "ctaBandButton": "阅读开始使用"
+  },
+  "features": {
+    "title": "功能",
+    "subtitle": "把「像系统键盘」和「RIME 能配置」放在同一条产品线上。",
+    "groups": {
+      "input": {
+        "title": "输入体验",
+        "items": [
+          {
+            "title": "接近原生的键盘形态",
+            "body": "系统灰表面、高对比按键、稳定触控目标；优先可用性，而不是装饰。"
+          },
+          {
+            "title": "全键盘与中文九宫格",
+            "body": "26 键与九宫格布局都按产品规格推进，九宫格对齐系统风格的字母组呈现与路径选择。"
+          },
+          {
+            "title": "候选与路径",
+            "body": "候选栏与（九宫格）拼音路径围绕可读性与触控命中设计，减少误触与视觉噪声。"
+          }
+        ]
+      },
+      "rime": {
+        "title": "RIME 与方案",
+        "items": [
+          {
+            "title": "librime + librime-lua",
+            "body": "生产路径基于固定版本的 RIME 制品与桥接层，输入逻辑与 UI 分层清晰。"
+          },
+          {
+            "title": "方案管理",
+            "body": "在主 App 中部署与管理输入方案；扩展侧重会话内输入，而不是重型部署。"
+          },
+          {
+            "title": "模糊音与词典",
+            "body": "支持模糊音等配置，以及本地用户词典相关能力，让输入随使用变得更贴合你。"
+          }
+        ]
+      },
+      "intelligence": {
+        "title": "本地智能",
+        "items": [
+          {
+            "title": "输入智能（可选）",
+            "body": "默认关闭。开启后仅在设备上做聚合统计，不保留原文内容。"
+          },
+          {
+            "title": "纠错与学习边界",
+            "body": "纠错与相关学习数据有边界、可清理；不会把主机上下文偷偷带走。"
+          },
+          {
+            "title": "反馈可配置",
+            "body": "音效与触感等反馈在设置中可控，适配你的打字习惯。"
+          }
+        ]
+      },
+      "privacy": {
+        "title": "隐私与同步",
+        "items": [
+          {
+            "title": "键盘扩展不传击键",
+            "body": "扩展不把未完成组字、候选、剪贴板或宿主 App 身份上传给开发者。"
+          },
+          {
+            "title": "可选设置同步",
+            "body": "RIME 设置同步需你主动选择目标；敏感配置可按产品设计加密后再离开设备。"
+          },
+          {
+            "title": "标准 RIME 同步",
+            "body": "在用户明确确认后，可与兼容的 RIME 前端共享词典快照类数据——与输入时路径分离。"
+          }
+        ]
+      }
+    }
+  },
+  "getStarted": {
+    "title": "开始使用",
+    "subtitle": "第三方键盘需要在系统设置中启用。按下列步骤完成首次配置。",
+    "note": "界面文案以你设备上的 iOS 版本为准；截图将在素材就绪后补充。",
+    "steps": [
+      {
+        "title": "安装 App",
+        "body": "从 App Store（上架后）安装 Universe Keyboard，并打开一次主 App，完成引导中的基础准备。"
+      },
+      {
+        "title": "添加键盘",
+        "body": "打开「设置 → 通用 → 键盘 → 键盘 → 添加新键盘…」，选择 Universe Keyboard。"
+      },
+      {
+        "title": "允许完全访问（如需）",
+        "body": "若你需要共享配置、本地词库学习或文档中说明的可选能力，请按系统提示允许完全访问。可随时在系统设置中关闭。"
+      },
+      {
+        "title": "部署输入方案",
+        "body": "回到主 App，按引导安装 / 部署 RIME 方案（例如雾凇拼音相关资源），确认状态就绪。"
+      },
+      {
+        "title": "在任意 App 中切换键盘",
+        "body": "在输入时按住地球键或使用键盘切换手势，选择 Universe Keyboard，开始输入。"
+      }
+    ],
+    "faqTitle": "常见问题",
+    "faqs": [
+      {
+        "q": "为什么需要完全访问？",
+        "a": "用于读取主 App 准备的共享容器、设置与本地资源等。产品设计不是用完全访问上传你的击键。详见隐私政策。"
+      },
+      {
+        "q": "会上传我打的字吗？",
+        "a": "键盘扩展不把输入内容发送给开发者服务器用于分析或广告。可选同步仅在你主动配置后发生，且有类别边界。"
+      },
+      {
+        "q": "和系统中文键盘有什么不同？",
+        "a": "目标是接近系统的手感与安静外观，同时提供 RIME 方案、布局与可配置输入行为。"
+      },
+      {
+        "q": "App Store 什么时候能下？",
+        "a": "下载入口目前为占位。上架后会在本站首页与导航中更新链接。"
+      }
+    ]
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "subtitle": "以下内容从主仓库隐私文档同步（或使用站点内回退副本）。",
+    "fallbackNotice": "未检测到同步文件时显示回退副本。运行 npm run sync:content 可从主仓库更新。",
+    "lastSynced": "内容来源"
+  },
+  "about": {
+    "title": "关于 Universe Keyboard",
+    "subtitle": "把桌面端熟悉的 RIME，做成更接近 iOS 原生体验的第三方键盘。",
+    "storyTitle": "为什么做这个",
+    "storyBody": "系统键盘足够好，但很多人仍需要可配置的拼音方案、九宫格习惯或 RIME 生态。Universe Keyboard 的目标不是做一个更吵的皮肤键盘，而是在 iOS 的沙盒与扩展限制下，尽量还原「安静、好用、可配置」的输入体验。",
+    "stackTitle": "技术栈（产品侧）",
+    "stack": [
+      "iOS 键盘扩展（UIKit）+ 主 App（SwiftUI）",
+      "RIME / librime + librime-lua",
+      "KeyboardCore 纯逻辑层与桥接分层",
+      "本地优先的设置与词典路径"
+    ],
+    "licenseTitle": "许可",
+    "licenseBody": "本项目代码采用 MIT License。RIME/librime 为 BSD-3-Clause，OpenCC 为 Apache-2.0。雾凇拼音 (rime-ice) 等方案可能采用 GPL-3.0 等许可证——请在使用前于应用内阅读并同意相关条款。",
+    "linksTitle": "链接",
+    "github": "GitHub 仓库",
+    "privacy": "隐私政策",
+    "changelog": "更新日志"
+  },
+  "changelog": {
+    "title": "更新日志",
+    "subtitle": "工程与产品变更记录。完整细节以主仓库 CHANGELOG 为准。",
+    "fallbackNotice": "未检测到同步文件时显示摘要回退。运行 npm run sync:content 可从主仓库更新。",
+    "empty": "暂无条目。"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "comingSoon": "即将推出",
+    "placeholder": "占位",
+    "language": "语言"
+  }
+}

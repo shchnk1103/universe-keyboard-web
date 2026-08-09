@@ -1,0 +1,33 @@
+version: 1
+project:
+  name: Universe Keyboard Official Website
+  repository: https://github.com/shchnk1103/universe-keyboard-web
+kit_upgrade:
+  upstream_repository: shchnk1103/kos-agent-kit
+  adopted_version: v0.3.0
+  channel: stable
+  update_owner: '@shchnk1103 (human)'
+  last_checked_at: 2026-08-09T21:17:56+08:00
+  notification_mode: manual # 尚未启用会修改 CI/CD 的上游提醒工作流
+governance:
+  product_approver: '@shchnk1103 (human)'
+  architecture_steward: '@shchnk1103 (human)'
+  quality_reviewer: '@shchnk1103 (human)'
+  active_work_limit: 10
+sources:
+  knowledge_index: docs/KNOWLEDGE_INDEX.md
+  active_work: docs/ACTIVE_WORK.md
+  reading_maps: docs/READING_MAPS.md
+  assignments: docs/assignments/
+  adr: docs/adr/
+  technical_debt: docs/TECH_DEBT.md
+validation:
+  commands:
+    - npm run lint
+    - npm run build
+profiles:
+  enabled_playbooks:
+    - coordinator
+    - context-scout
+    - documentation-maintainer
+    - quality-reviewer

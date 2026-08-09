@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Universe Keyboard — Official Website
 
-## Getting Started
+Marketing site for [Universe Keyboard](https://github.com/shchnk1103/Universe-Keyboard): a RIME-powered third-party Chinese keyboard for iOS.
 
-First, run the development server:
+## Stack
+
+- **Next.js** (App Router) + TypeScript + Tailwind CSS v4
+- **next-intl** — Chinese / English (`/zh`, `/en`)
+- **Framer Motion** — page motion
+- **next-themes** — system preference, dark-friendly
+- **Static export** (`output: "export"`) — deploy to any static host or China VPS/nginx later
+
+## Pages
+
+| Path | Purpose |
+|------|---------|
+| `/[locale]/` | Home |
+| `/[locale]/features/` | Features |
+| `/[locale]/get-started/` | Setup guide + FAQ |
+| `/[locale]/privacy/` | Privacy (synced from main repo) |
+| `/[locale]/about/` | About / licenses |
+| `/[locale]/changelog/` | Changelog (synced, truncated) |
+
+## Develop
 
 ```bash
+npm install
+npm run sync:content   # optional if main repo is a sibling
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) → redirects to `/zh/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sync content from main repo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+By default the script reads:
 
-## Learn More
+```text
+../Universe Keyboard/docs/PRIVACY_POLICY.md
+../Universe Keyboard/CHANGELOG.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run sync:content
+# or
+MAIN_REPO_PATH="/path/to/Universe Keyboard" npm run sync:content
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Output: `content/synced/`. If missing, pages fall back to `content/fallback/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`prebuild` runs sync automatically.
 
-## Deploy on Vercel
+## Build (static)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+# artifacts in out/
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Serve locally:
+
+```bash
+npx serve out
+```
+
+### Deploy notes (China / self-host)
+
+1. Upload `out/` to nginx, Caddy, or object storage + CDN.
+2. Point SPA-style unknown routes carefully — this site uses real multi-page paths with `trailingSlash: true`.
+3. Example nginx:
+
+```nginx
+server {
+  listen 80;
+  server_name your.domain;
+  root /var/www/universe-web;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ $uri/index.html =404;
+  }
+}
+```
+
+4. Update `src/lib/site.ts` when App Store / TestFlight URLs exist.
+5. Replace `metadataBase` in `src/app/[locale]/layout.tsx` with the real domain.
+
+## Download CTA
+
+Placeholder only. Edit:
+
+```ts
+// src/lib/site.ts
+appStoreUrl: "https://apps.apple.com/...",
+testFlightUrl: null,
+```
+
+## Assets
+
+Device screenshots / screen recordings go under `public/images/` (to be added). Home showcase blocks are placeholders until then.
+
+## Design direction
+
+Linear-inspired: restrained type, fine borders, system theme with dark preference, precise motion — not a loud “skin keyboard” brand.

@@ -1,26 +1,192 @@
 @import "tailwindcss";
 
+/* Linear-inspired tokens: quiet surfaces, fine borders, precise type */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f5f5;
+  --background-elevated: #ffffff;
+  --foreground: #0a0a0a;
+  --foreground-secondary: #5c5c5c;
+  --foreground-muted: #8a8a8a;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --accent: #5e6ad2;
+  --accent-soft: rgba(94, 106, 210, 0.12);
+  --accent-glow: rgba(94, 106, 210, 0.35);
+  --card: rgba(255, 255, 255, 0.72);
+  --card-solid: #ffffff;
+  --ring: rgba(94, 106, 210, 0.45);
+  --hero-glow: radial-gradient(
+    60% 50% at 50% -10%,
+    rgba(94, 106, 210, 0.16),
+    transparent 70%
+  );
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 12px 40px rgba(0, 0, 0, 0.06);
+  --keyboard-bg: #d1d3d9;
+  --keyboard-key: #ffffff;
+  --keyboard-key-fn: #adb1b8;
+  --keyboard-text: #000000;
+}
+
+.dark {
+  --background: #08090a;
+  --background-elevated: #0f1011;
+  --foreground: #f7f8f8;
+  --foreground-secondary: #8a8f98;
+  --foreground-muted: #62666d;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --accent: #7170ff;
+  --accent-soft: rgba(113, 112, 255, 0.14);
+  --accent-glow: rgba(113, 112, 255, 0.4);
+  --card: rgba(255, 255, 255, 0.03);
+  --card-solid: #121314;
+  --ring: rgba(113, 112, 255, 0.5);
+  --hero-glow: radial-gradient(
+    55% 45% at 50% -5%,
+    rgba(113, 112, 255, 0.22),
+    transparent 70%
+  );
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --shadow-soft: 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 24px 64px rgba(0, 0, 0, 0.45);
+  --keyboard-bg: #1c1c1e;
+  --keyboard-key: #3a3a3c;
+  --keyboard-key-fn: #636366;
+  --keyboard-text: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
   --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-card: var(--card);
+  --color-card-solid: var(--card-solid);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--foreground);
+}
+
+/* Subtle page grid behind hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 20%, transparent 75%);
+}
+
+.bg-hero-glow {
+  background: var(--hero-glow);
+}
+
+/* Markdown content for privacy / changelog */
+.prose-site {
+  color: var(--foreground-secondary);
+  line-height: 1.75;
+  font-size: 0.9375rem;
+}
+
+.prose-site h1,
+.prose-site h2,
+.prose-site h3,
+.prose-site h4 {
+  color: var(--foreground);
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-site h1 {
+  font-size: 1.75rem;
+}
+
+.prose-site h2 {
+  font-size: 1.35rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose-site h3 {
+  font-size: 1.1rem;
+}
+
+.prose-site p {
+  margin: 0.85rem 0;
+}
+
+.prose-site ul,
+.prose-site ol {
+  margin: 0.85rem 0;
+  padding-left: 1.25rem;
+}
+
+.prose-site li {
+  margin: 0.35rem 0;
+}
+
+.prose-site a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-site code {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.85em;
+  background: var(--accent-soft);
+  padding: 0.12em 0.35em;
+  border-radius: 0.35rem;
+}
+
+.prose-site pre {
+  background: var(--card-solid);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.prose-site blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--foreground-muted);
+  margin: 1rem 0;
+}
+
+.prose-site hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.prose-site strong {
+  color: var(--foreground);
+  font-weight: 600;
 }
