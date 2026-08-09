@@ -4,10 +4,10 @@
 
 | Field | Value |
 |---|---|
-| Lifecycle | Active |
-| Current Phase | Independent review found a potential non-link Button behavior change; preserve the prior behavior, then repeat executor and independent verification. |
+| Lifecycle | Completed |
+| Current Phase | Scope correction, executor verification and remote target-SHA verification completed; replacement independent Quality Agent review is pending. |
 | Material non-claims | This task does not claim a release, deployment, visual redesign, full end-to-end coverage, or human Quality / Release acceptance. |
-| Next handoff / decision | Codex Quality Agent independently revalidates the replacement target SHA; `@shchnk1103` retains any final Gate decision. |
+| Next handoff / decision | Codex Quality Agent independently revalidates `3d0575e`; `@shchnk1103` retains any final Gate decision. |
 | Residuals | None at assignment start; `WEB-QUALITY-001` technical debt is the item under disposition. |
 
 ---
@@ -41,9 +41,9 @@
 
 ## Evidence Ledger
 
-- Target commit SHA: Pending replacement commit after scope correction.
-- Evidence records / immutable links: [`2026-08-09T21-46-09+08-00-9e413f6.md`](../evidence/web-quality-001/2026-08-09T21-46-09+08-00-9e413f6.md) (superseded as final evidence).
-- Evidence grade: Quality-reverified on the limited lint/build/404 claims; replacement verification pending.
+- Target commit SHA: `3d0575e8dbd6692abc4c5404e4a64524f5b99585`.
+- Evidence records / immutable links: [`2026-08-09T21-52-50+08-00-3d0575e.md`](../evidence/web-quality-001/2026-08-09T21-52-50+08-00-3d0575e.md); the earlier `9e413f6` evidence remains historical.
+- Evidence grade: Executor-recorded; replacement Quality-reverified pending.
 - Residuals and disposition: `WEB-QUALITY-001` is `fix`; any new residual must be classified before closure.
 
 ## Release Gate
@@ -63,3 +63,4 @@
 - 2026-08-09: Assignment created from `WEB-QUALITY-001` technical debt under explicit user authorization.
 - 2026-08-09: Commit `9e413f6e446d44958046d4e68a8bbd773db7dad7` fixed the two recorded lint findings and was pushed to `origin/main`; executor verification passed. Independent Quality Agent review remains pending.
 - 2026-08-09: Independent Quality Agent confirmed lint/build/static-404 claims but identified a potential behavior change in the non-link Button branch. The assignment returned to Active to preserve historical behavior rather than seeking human risk acceptance.
+- 2026-08-09: Commit `3d0575e8dbd6692abc4c5404e4a64524f5b99585` restored the prior Button prop-spread behavior while retaining the lint correction; executor lint/build/static-404 verification passed and the remote SHA matches. Replacement independent review remains pending.
