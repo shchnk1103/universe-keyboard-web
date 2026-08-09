@@ -4,4 +4,4 @@
 
 | Task ID | Current Status | Assignment |
 |---|---|---|
-| WEB-PUBLISH-001 | Active — public repository initialization | [`WEB-PUBLISH-001`](assignments/web-publish-001.md) |
+| _none_ | | |
