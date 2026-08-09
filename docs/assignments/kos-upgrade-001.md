@@ -4,11 +4,11 @@
 
 | Field | Value |
 |---|---|
-| Lifecycle | Completed |
-| Current Phase | G-01 project adaptation, structural validation and remote target-SHA verification completed; independent documentation review is pending. |
+| Lifecycle | Closed |
+| Current Phase | G-01 project adaptation, structural validation, remote target-SHA verification and independent documentation review completed. |
 | Material non-claims | This task does not alter dependencies, licenses, CI/CD, the static payload, deployment, or any Product / Architecture / Quality / Release Gate. |
-| Next handoff / decision | Codex Quality Agent independently checks `8367ea0`; human owners retain all license and final Gate decisions. |
-| Residuals | `KOS-G01-001` — build-time artifact license/provenance disposition is not a legal conclusion. |
+| Next handoff / decision | No handoff for this governance-only adoption. A future artifact change requires a new Assignment and `@shchnk1103`'s written license/provenance disposition before Ready. |
+| Residuals | `KOS-G01-001` remains open technical debt for future artifact changes; it is not a legal conclusion. |
 
 ---
 
@@ -42,8 +42,8 @@
 ## Evidence Ledger
 
 - Target commit SHA: `8367ea0d8a949294aaa1d976618d5e442d91c7ec`.
-- Evidence records / immutable links: [`2026-08-09T22-07-29+08-00-8367ea0.md`](../evidence/kos-upgrade-001/2026-08-09T22-07-29+08-00-8367ea0.md).
-- Evidence grade: Executor-recorded; Quality-reverified pending.
+- Evidence records / immutable links: [`2026-08-09T22-07-29+08-00-8367ea0.md`](../evidence/kos-upgrade-001/2026-08-09T22-07-29+08-00-8367ea0.md); [`2026-08-09T22-15-24+08-00-8367ea0-quality-reverified.md`](../evidence/kos-upgrade-001/2026-08-09T22-15-24+08-00-8367ea0-quality-reverified.md).
+- Evidence grade: Quality-reverified (governance documents, lockfile and static-output facts only).
 - Residuals and disposition: `KOS-G01-001` is `tech_debt:KOS-G01-001`; no artifact change Assignment may enter Ready without its required disposition.
 
 ## Release Gate
@@ -54,11 +54,12 @@
 
 ## Handoff
 
-- Handoff Target: Codex Quality Agent, then `@shchnk1103`.
-- Required Handoff Content: adopted tag and commit, project Source of Truth, applicable lockfile facts, Profile/route diff, structure-validation output and residual disposition.
+- Handoff Target: None for this closed governance adoption.
+- Required Handoff Content: Future artifact-change Assignment must carry its applicable license/provenance disposition, then independently revalidate G-01.
 - Revalidation Trigger: Any Next.js/native artifact version, registry origin, package integrity, build path, final payload boundary or delivery model change.
 
 ## History
 
 - 2026-08-09: Assignment created after the required `v0.4.0` Upgrade Review. No artifact, dependency, CI/CD or release change has occurred.
-- 2026-08-09: Commit `8367ea0d8a949294aaa1d976618d5e442d91c7ec` adopted the G-01 project documents and Profile version; KOS structure validation and upstream-current comparison passed. Independent documentation review remains pending.
+- 2026-08-09: Commit `8367ea0d8a949294aaa1d976618d5e442d91c7ec` adopted the G-01 project documents and Profile version; KOS structure validation and upstream-current comparison passed.
+- 2026-08-09: Independent Quality Agent reverified the target's governance documents, lockfile and static-output facts. `KOS-G01-001` remains classified technical debt that blocks future artifact-change Ready, so this governance-only Assignment is closed without a legal, Quality, Release or Product approval claim.
