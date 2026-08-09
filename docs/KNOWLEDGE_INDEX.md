@@ -16,6 +16,7 @@
 - 验证证据：[`evidence/`](evidence/)
 - 发布状态路由：[`releases/RELEASE_STATUS.md`](releases/RELEASE_STATUS.md)
 - 发布 Gate Playbook：[`playbooks/release-gate.md`](playbooks/release-gate.md)
+- 构建期第三方 Artifact Gate：[`SUPPLY_CHAIN_ARTIFACT_GATE.md`](SUPPLY_CHAIN_ARTIFACT_GATE.md)
 
 ## 已确认的项目入口
 

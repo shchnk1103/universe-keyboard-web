@@ -9,6 +9,7 @@
 | Current website configuration | `package.json` and `next.config.ts` | 已确认的运行命令和 Next.js 配置 |
 | Product, content and deployment facts | `README.md` | 当前公开的站点定位、内容同步与部署说明 |
 | Validation evidence | `docs/evidence/` | 按 Assignment 保存命令、环境、结果、证据等级与残余项 |
+| Third-party binary artifact supply chain | `docs/SUPPLY_CHAIN_ARTIFACT_GATE.md` | 构建期/运行期预编译 artifact 的来源、许可证、构建、目标、激活与回滚合同 |
 | Release Gate | `docs/assignments/RELEASE-*.md` | 对应 Release Assignment 记录固定 SHA、证据与人类 Go/No-Go；GitHub 状态不替代该决定 |
 | Open risk | `docs/TECH_DEBT.md` | 未关闭风险与 owner |
 

@@ -5,11 +5,11 @@
 | Field | Value |
 |---|---|
 | Upstream | `shchnk1103/kos-agent-kit` |
-| Adopted version | `v0.3.0` |
+| Adopted version | `v0.4.0` |
 | Channel | stable |
-| Last checked | 2026-08-09T21:17:56+08:00 |
+| Last checked | 2026-08-09T22:05:22+08:00 |
 | Update owner | `@shchnk1103` (human) |
 | Notification mode | manual |
-| Current decision | Adopted for One-Link Bootstrap scaffolding only; human governance roles remain unresolved. |
+| Current decision | `v0.4.0` adopted through `KOS-UPGRADE-001`: G-01 is enabled for the Next.js build-time `@next/swc-*` native artifacts. Product, Architecture, Quality and Release acceptance remain human decisions. |
 
-No upgrade review is pending for the adopted version. The next human-confirmed update owner must record future adopt, defer or not-applicable decisions here and, when relevant, add a dated record under `docs/kos/upgrade-records/`.
+No upstream upgrade review is pending after the `v0.4.0` adoption. The next human-confirmed update owner must record future adopt, defer or not-applicable decisions here and, when relevant, add a dated record under `docs/kos/upgrade-records/`.

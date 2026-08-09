@@ -4,4 +4,4 @@
 
 | Task ID | Current Status | Assignment |
 |---|---|---|
-| _none_ | | |
+| KOS-UPGRADE-001 | Active — adopt KOS Kit v0.4.0 G-01 | [`KOS-UPGRADE-001`](assignments/kos-upgrade-001.md) |
