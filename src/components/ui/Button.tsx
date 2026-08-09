@@ -12,16 +12,6 @@ const variants: Record<Variant, string> = {
   ghost: "text-foreground-secondary hover:text-foreground hover:bg-accent-soft",
 };
 
-function buttonClasses(variant: Variant, className?: string) {
-  return cn(
-    "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-    "disabled:pointer-events-none disabled:opacity-50",
-    variants[variant],
-    className,
-  );
-}
-
 type Common = {
   children: ReactNode;
   className?: string;
@@ -39,9 +29,17 @@ type ButtonAsLink = Common & {
 };
 
 export function Button(props: ButtonAsButton | ButtonAsLink) {
+  const { children, className, variant = "primary" } = props;
+  const classes = cn(
+    "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "disabled:pointer-events-none disabled:opacity-50",
+    variants[variant],
+    className,
+  );
+
   if ("href" in props && props.href) {
-    const { children, className, variant = "primary", href, external } = props;
-    const classes = buttonClasses(variant, className);
+    const { href, external } = props;
 
     if (external || href.startsWith("http") || href.startsWith("mailto:")) {
       return (
@@ -67,8 +65,9 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
     );
   }
 
-  const { children, className, variant = "primary", ...buttonProps } = props;
-  const classes = buttonClasses(variant, className);
+  const { href: omittedHref, ...buttonProps } = props as ButtonAsButton;
+  // Keep the existing button-prop spread behavior while excluding link-only href.
+  void omittedHref;
 
   return (
     <button type="button" className={classes} {...buttonProps}>
