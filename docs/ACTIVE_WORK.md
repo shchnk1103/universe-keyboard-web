@@ -4,4 +4,4 @@
 
 | Task ID | Current Status | Assignment |
 |---|---|---|
-| _none_ | | |
+| WEB-QUALITY-001 | Active — resolve recorded lint findings | [`WEB-QUALITY-001`](assignments/web-quality-001.md) |
