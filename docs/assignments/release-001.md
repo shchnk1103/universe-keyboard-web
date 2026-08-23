@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Lifecycle | Active |
-| Current Phase | Human product inputs recorded; public origin set to the existing `workers.dev` URL; CTA and screenshot placeholders accepted for this cutover. G5 Go/No-Go is not recorded. |
+| Current Phase | Origin is live on `workers.dev` at SHA `a4244ea`. G5 Go/No-Go is not recorded. |
 | Material non-claims | This Assignment does not itself constitute Product, Architecture, Quality or Release acceptance. Workers Builds success, hosted smoke evidence and independent quality reverify remain required before G5. |
 | Next handoff / decision | Executor publishes `siteConfig.siteUrl`, collects G0–G4 evidence on a fixed SHA, then `@shchnk1103` records G5. |
 | Residuals | Custom domain later (`accept`). App Store / TestFlight CTA placeholder (`accept`). Home screenshot placeholders (`accept`). `KOS-G01-001` remains `tech_debt:KOS-G01-001`. |
@@ -41,8 +41,8 @@
 
 ## Evidence Ledger
 
-- Target commit SHA:
-- Evidence records / immutable links:
+- Target commit SHA: `a4244ea45a9334eb58adb584db6099cc3815fe00`
+- Evidence records / immutable links: [`../evidence/release-001/2026-08-23T-origin-cutover.md`](../evidence/release-001/2026-08-23T-origin-cutover.md)
 - Evidence grade: Executor-recorded
 - Residuals and disposition: Domain later `accept`. CTA placeholder `accept`. Screenshot placeholders `accept`. `KOS-G01-001` `tech_debt:KOS-G01-001`.
 
@@ -61,3 +61,4 @@
 ## History
 
 - 2026-08-23: Assignment created from explicit human origin and placeholder decisions.
+- 2026-08-23: `a4244ea` set `siteConfig.siteUrl` and `metadataBase`. Cloudflare Workers Builds produced version `69ae677c-4ae5-434b-96cf-88b447b5c0ad`. GitHub Actions run `32617646837` succeeded (lint/build; deploy skipped without secrets). G5 remains unsigned.
