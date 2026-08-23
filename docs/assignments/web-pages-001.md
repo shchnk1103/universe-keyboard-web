@@ -64,3 +64,4 @@
 - 2026-08-23: Executor added `wrangler.jsonc`, deploy scripts, README notes and an optional GitHub Actions workflow. `npm run lint`, `npm run build` and `wrangler deploy --dry-run` passed. `wrangler whoami` is unauthenticated, so no public URL was published.
 - 2026-08-23: After human `npx wrangler login`, executor deployed candidate `https://universe-keyboard-web.761962425.workers.dev` (Workers version `807186c6-318d-4198-aea9-1e9ec814e75d`). This is not a Release Gate.
 - 2026-08-23: Hosting config committed as `04f701fee7e6622bc3fa7e7f622e56a8fa9a0982`. GitHub Actions will skip Cloudflare upload until repository secrets exist.
+- 2026-08-23: First Actions run failed: `secrets` is invalid in step `if`. Second run failed: `npm ci` on Node 20/npm 10 disagreed with the npm 12 lockfile (`@swc/helpers@0.5.23`). Workflow now uses Node 22; lockfile regenerated with npm 10. Next remains `16.2.12`. Not a G-01 artifact-version change.
