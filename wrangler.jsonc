@@ -1,0 +1,12 @@
+{
+  // Assets-only static host. Do not let Wrangler auto-detect Next.js
+  // and generate OpenNext — this app uses `output: "export"` to `out/`.
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "universe-keyboard-web",
+  "compatibility_date": "2026-08-23",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

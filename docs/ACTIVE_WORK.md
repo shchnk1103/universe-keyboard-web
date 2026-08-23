@@ -4,4 +4,4 @@
 
 | Task ID | Current Status | Assignment |
 |---|---|---|
-| _none_ | | |
+| WEB-PAGES-001 | Active | [`assignments/web-pages-001.md`](assignments/web-pages-001.md) |

@@ -8,7 +8,9 @@
     "prebuild": "node scripts/sync-content.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:dry-run": "npm run build && wrangler deploy --dry-run"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -29,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.125.0"
   }
 }

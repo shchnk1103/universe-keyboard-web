@@ -8,7 +8,7 @@ Marketing site for [Universe Keyboard](https://github.com/shchnk1103/Universe-Ke
 - **next-intl** — Chinese / English (`/zh`, `/en`)
 - **Framer Motion** — page motion
 - **next-themes** — system preference, dark-friendly
-- **Static export** (`output: "export"`) — deploy to any static host or China VPS/nginx later
+- **Static export** (`output: "export"`) — Cloudflare Workers Static Assets (Workers & Pages); `out/` can also be served by nginx later
 
 ## Pages
 
@@ -63,11 +63,27 @@ Serve locally:
 npx serve out
 ```
 
-### Deploy notes (China / self-host)
+### Deploy (Cloudflare)
 
-1. Upload `out/` to nginx, Caddy, or object storage + CDN.
-2. Point SPA-style unknown routes carefully — this site uses real multi-page paths with `trailingSlash: true`.
-3. Example nginx:
+This site is a static export. Cloudflare hosts it as **Workers Static Assets** (the current static path under Workers & Pages). Do not run unconfigured `wrangler deploy` in a way that auto-detects Next.js and installs OpenNext.
+
+```bash
+npx wrangler login
+npm run deploy
+```
+
+Config is `wrangler.jsonc`: assets from `out/`, trailing slashes forced to match `trailingSlash: true`, unknown routes use `404.html`.
+
+GitHub Actions (`.github/workflows/deploy-cloudflare.yml`) deploys `main` when these repository secrets exist:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+A `*.workers.dev` URL is a candidate host, not a product release. Update `metadataBase` and download URLs before treating any public URL as production.
+
+### Optional self-host
+
+`out/` can also be uploaded to nginx, Caddy, or object storage. This site uses real multi-page paths with `trailingSlash: true`, not SPA fallback.
 
 ```nginx
 server {
@@ -81,9 +97,6 @@ server {
   }
 }
 ```
-
-4. Update `src/lib/site.ts` when App Store / TestFlight URLs exist.
-5. Replace `metadataBase` in `src/app/[locale]/layout.tsx` with the real domain.
 
 ## Download CTA
 
