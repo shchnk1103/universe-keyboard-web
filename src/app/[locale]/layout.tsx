@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { siteConfig } from "@/lib/site";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -36,12 +37,13 @@ export async function generateMetadata({
       template: `%s · ${t("siteName")}`,
     },
     description: t("homeDescription"),
-    metadataBase: new URL("https://universekeyboard.example"),
+    metadataBase: new URL(siteConfig.siteUrl),
     openGraph: {
       title: t("homeTitle"),
       description: t("homeDescription"),
       siteName: t("siteName"),
       type: "website",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
     },
   };
 }

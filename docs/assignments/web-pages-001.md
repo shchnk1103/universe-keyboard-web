@@ -7,7 +7,7 @@
 | Lifecycle | Active |
 | Current Phase | Candidate Workers URL is live; hosting config is being published to `origin/main`. Independent documentation review is still pending. |
 | Material non-claims | This task does not record Product, Architecture, Quality or Release acceptance. A `*.workers.dev` candidate URL is not a release. Placeholder metadata (`universekeyboard.example`) and download CTAs remain non-production facts. |
-| Next handoff / decision | `@shchnk1103` may add GitHub Actions secrets for auto-deploy. A later `RELEASE-*` Assignment is required before any Go/No-Go. |
+| Next handoff / decision | Hosting setup is in use. Public origin cutover continues in [`release-001.md`](release-001.md). |
 | Residuals | GitHub Actions auto-deploy waits on repository secrets (`accept` for this Assignment). `KOS-G01-001` remains `tech_debt:KOS-G01-001`. Placeholder `metadataBase` and download CTAs remain non-production facts. |
 
 ---

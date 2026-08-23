@@ -79,7 +79,11 @@ GitHub Actions (`.github/workflows/deploy-cloudflare.yml`) deploys `main` when t
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
 
-A `*.workers.dev` URL is a candidate host, not a product release. Update `metadataBase` and download URLs before treating any public URL as production.
+Public origin (until a custom domain is attached):
+
+https://universe-keyboard-web.761962425.workers.dev
+
+Download CTAs and home screenshots may remain placeholders. A later domain cutover must update `siteConfig.siteUrl`. A GitHub Actions upload still needs repository secrets; Cloudflare Workers Builds is the Git-connected deploy path.
 
 ### Optional self-host
 

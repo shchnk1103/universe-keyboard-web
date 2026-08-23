@@ -4,11 +4,11 @@
 
 | Field | Value |
 |---|---|
-| Lifecycle | No release Assignment exists |
-| Current Phase | Not started |
-| Material non-claims | A public repository or successful build does not establish deployment or release readiness. |
-| Next handoff / decision | `@shchnk1103` creates a release Assignment when a release is intended. |
-| Residuals | None |
+| Lifecycle | Release Assignment exists: [`../assignments/release-001.md`](../assignments/release-001.md) |
+| Current Phase | Active — origin and placeholder inputs recorded; G5 not signed |
+| Material non-claims | A live `workers.dev` URL and a Git-connected Workers Build do not by themselves constitute G5. |
+| Next handoff / decision | Executor attaches G0–G4 evidence on a fixed SHA; `@shchnk1103` records G5. |
+| Residuals | See `RELEASE-001` |
 
 ---
 
