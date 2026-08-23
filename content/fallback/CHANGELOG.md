@@ -1,6 +1,6 @@
 # CHANGELOG
 
-Public summary placeholder. Run `npm run sync:content` with the main repository available to refresh this page from `Universe Keyboard/CHANGELOG.md`.
+Recent public notes for the official website.
 
 ## Website
 

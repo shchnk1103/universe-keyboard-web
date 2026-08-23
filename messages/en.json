@@ -183,9 +183,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "subtitle": "Synced from the main repository privacy document (or the in-site fallback copy).",
-    "fallbackNotice": "Showing fallback copy because a synced file was not found. Run npm run sync:content to refresh from the main repo.",
-    "lastSynced": "Source"
+    "subtitle": "How Universe Keyboard handles input, on-device data, and optional sync."
   },
   "about": {
     "title": "About Universe Keyboard",
@@ -208,8 +206,7 @@
   },
   "changelog": {
     "title": "Changelog",
-    "subtitle": "Engineering and product history. The main repository CHANGELOG is the source of truth.",
-    "fallbackNotice": "Showing fallback summary because a synced file was not found. Run npm run sync:content to refresh from the main repo.",
+    "subtitle": "Recent product and engineering changes.",
     "empty": "No entries yet."
   },
   "common": {

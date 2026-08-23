@@ -22,7 +22,7 @@ const files = [
   {
     from: path.join(mainRepo, "docs", "PRIVACY_POLICY.md"),
     to: path.join(outDir, "PRIVACY_POLICY.md"),
-    transform: (s) => s,
+    transform: (s) => toPublicPrivacyMarkdown(s),
   },
   {
     from: path.join(mainRepo, "CHANGELOG.md"),
@@ -31,6 +31,25 @@ const files = [
     transform: (s) => truncateChangelog(s, 12),
   },
 ];
+
+function toPublicPrivacyMarkdown(markdown) {
+  let text = markdown.replace(/\r\n/g, "\n");
+  text = text.replace(/^>\s*\*\*Status:\*\*.+\n?/gim, "");
+  text = text.replace(
+    /follow their corresponding in-app controls and repository product contracts\./g,
+    "follow the corresponding in-app controls.",
+  );
+  text = text.replace(
+    /## App Privacy Disclosure\n[\s\S]*?(?=\n## )/,
+    [
+      "## App Store Privacy Labels",
+      "",
+      "Processing that stays on the device and is never sent off the device is not treated as developer collection in App Store privacy labels. Optional encrypted transfer to a storage destination you choose is directed by you and is separate from developer collection.",
+      "",
+    ].join("\n"),
+  );
+  return text.replace(/\n{3,}/g, "\n\n").trim() + "\n";
+}
 
 function truncateChangelog(text, maxHeadings) {
   const lines = text.split(/\r?\n/);
@@ -44,7 +63,7 @@ function truncateChangelog(text, maxHeadings) {
         out.push(
           "---",
           "",
-          "_… truncated for the website. See the full CHANGELOG in the main repository._",
+          "_… truncated. The full changelog is in the project repository._",
           "",
         );
         break;

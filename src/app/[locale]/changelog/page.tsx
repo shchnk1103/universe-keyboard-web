@@ -26,7 +26,7 @@ export default async function ChangelogPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("changelog");
-  const { markdown, source } = readSyncedMarkdown("CHANGELOG.md");
+  const { markdown } = readSyncedMarkdown("CHANGELOG.md");
 
   return (
     <div className="pb-20 pt-14 sm:pb-28 sm:pt-20">
@@ -36,9 +36,6 @@ export default async function ChangelogPage({
             {t("title")}
           </h1>
           <p className="mt-3 text-foreground-secondary">{t("subtitle")}</p>
-          <p className="mt-2 text-xs text-foreground-muted">
-            {source === "fallback" ? t("fallbackNotice") : `source: ${source}`}
-          </p>
         </FadeIn>
 
         <FadeIn delay={0.08} className="mt-10">

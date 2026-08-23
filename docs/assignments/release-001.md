@@ -62,3 +62,4 @@
 
 - 2026-08-23: Assignment created from explicit human origin and placeholder decisions.
 - 2026-08-23: `a4244ea` set `siteConfig.siteUrl` and `metadataBase`. Cloudflare Workers Builds produced version `69ae677c-4ae5-434b-96cf-88b447b5c0ad`. GitHub Actions run `32617646837` succeeded (lint/build; deploy skipped without secrets). G5 remains unsigned.
+- 2026-08-23: Privacy/changelog pages no longer show internal sync source. Public privacy markdown strips repository-status notes such as App Store publication-URL requirements.

@@ -26,7 +26,7 @@ export default async function PrivacyPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("privacy");
-  const { markdown, source } = readSyncedMarkdown("PRIVACY_POLICY.md");
+  const { markdown } = readSyncedMarkdown("PRIVACY_POLICY.md");
 
   return (
     <div className="pb-20 pt-14 sm:pb-28 sm:pt-20">
@@ -36,10 +36,6 @@ export default async function PrivacyPage({
             {t("title")}
           </h1>
           <p className="mt-3 text-foreground-secondary">{t("subtitle")}</p>
-          <p className="mt-2 text-xs text-foreground-muted">
-            {t("lastSynced")}: {source}
-            {source === "fallback" ? ` · ${t("fallbackNotice")}` : null}
-          </p>
         </FadeIn>
 
         <FadeIn delay={0.08} className="mt-10">

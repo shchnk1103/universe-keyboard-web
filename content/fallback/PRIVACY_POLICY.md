@@ -1,8 +1,6 @@
 # Universe Keyboard Privacy Policy
 
 > **Effective date:** 2026-07-12
->
-> **Status:** Current repository privacy-policy source; App Store publication URL required before submission
 
 ## Privacy Position
 
@@ -64,16 +62,14 @@ Universe Keyboard does not include advertising, cross-app tracking or a user-acc
 
 - Typing Intelligence daily aggregates are retained for at most 365 days; all-time totals remain until cleared.
 - Typing Intelligence clear advances a reset epoch and removes the aggregate payload so delayed Extension work cannot restore deleted data.
-- RIME user-dictionary, correction-learning, settings and diagnostics follow their corresponding in-app controls and repository product contracts.
+- RIME user-dictionary, correction-learning, settings and diagnostics follow the corresponding in-app controls.
 - Encrypted RIME sync data remains at the selected destination until the user deletes it there or uses the in-app remote deletion action.
 - The local sync key is stored in the device Keychain. Disconnecting preserves it for recovery; deleting remote sync data also clears the local key.
 - Removing the App may remove App-owned containers according to iOS behavior; this is not presented as a substitute for in-app deletion controls.
 
-## App Privacy Disclosure
+## App Store Privacy Labels
 
-Data processed only on device and never transmitted off device is not represented as developer collection in App Store privacy details. User-directed encrypted transfer to the user's selected storage destination must be reviewed separately from developer collection. Required Reason API declarations remain separate and accurately describe APIs used for App Group preferences, container metadata and storage-capacity checks.
-
-The App Store privacy answers, bundled privacy manifests, product behavior and this policy must be reviewed together before every submission.
+Processing that stays on the device and is never sent off the device is not treated as developer collection in App Store privacy labels. Optional encrypted transfer to a storage destination you choose is directed by you and is separate from developer collection.
 
 ## Changes
 
