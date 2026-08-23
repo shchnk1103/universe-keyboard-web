@@ -4,5 +4,4 @@
 
 | Task ID | Current Status | Assignment |
 |---|---|---|
-| WEB-PAGES-001 | Active | [`assignments/web-pages-001.md`](assignments/web-pages-001.md) |
-| RELEASE-001 | Active | [`assignments/release-001.md`](assignments/release-001.md) |
+| _none_ | | |

@@ -4,10 +4,10 @@
 
 | Field | Value |
 |---|---|
-| Lifecycle | Release Assignment exists: [`../assignments/release-001.md`](../assignments/release-001.md) |
-| Current Phase | Active — origin and placeholder inputs recorded; G5 not signed |
-| Material non-claims | A live `workers.dev` URL and a Git-connected Workers Build do not by themselves constitute G5. |
-| Next handoff / decision | Executor attaches G0–G4 evidence on a fixed SHA; `@shchnk1103` records G5. |
+| Lifecycle | Closed — [`../assignments/release-001.md`](../assignments/release-001.md) |
+| Current Phase | G5 Go at SHA `73e0fb9` |
+| Material non-claims | This cutover does not approve a custom domain, App Store listing, or `KOS-G01-001` legal disposition. |
+| Next handoff / decision | None for RELEASE-001. Domain or CTA changes need a new Assignment. |
 | Residuals | See `RELEASE-001` |
 
 ---
