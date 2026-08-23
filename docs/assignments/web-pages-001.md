@@ -41,7 +41,7 @@
 
 ## Evidence Ledger
 
-- Target commit SHA: Uncommitted working tree on baseline `7eac858d96c3e21f04c1a90f6175db2df016ab1c`.
+- Target commit SHA: `04f701fee7e6622bc3fa7e7f622e56a8fa9a0982`
 - Evidence records / immutable links: [`2026-08-23T-executor-setup.md`](../evidence/web-pages-001/2026-08-23T-executor-setup.md); [`2026-08-23T-candidate-deploy.md`](../evidence/web-pages-001/2026-08-23T-candidate-deploy.md)
 - Evidence grade: Executor-recorded
 - Residuals and disposition: Live candidate publish is done. GitHub Actions auto-deploy is `accept` until secrets exist. `KOS-G01-001` remains `tech_debt:KOS-G01-001`.
@@ -63,3 +63,4 @@
 - 2026-08-23: Assignment created under explicit user authorization to continue Cloudflare Pages work. Cloudflare currently hosts new static sites as Workers Static Assets (Workers & Pages). Classic `wrangler pages deploy` is not used.
 - 2026-08-23: Executor added `wrangler.jsonc`, deploy scripts, README notes and an optional GitHub Actions workflow. `npm run lint`, `npm run build` and `wrangler deploy --dry-run` passed. `wrangler whoami` is unauthenticated, so no public URL was published.
 - 2026-08-23: After human `npx wrangler login`, executor deployed candidate `https://universe-keyboard-web.761962425.workers.dev` (Workers version `807186c6-318d-4198-aea9-1e9ec814e75d`). This is not a Release Gate.
+- 2026-08-23: Hosting config committed as `04f701fee7e6622bc3fa7e7f622e56a8fa9a0982`. GitHub Actions will skip Cloudflare upload until repository secrets exist.
