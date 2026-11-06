@@ -13,7 +13,8 @@ export function readSyncedMarkdown(filename: string): {
   let markdown: string | null = null;
   let source: "synced" | "fallback" = "fallback";
 
-  if (fs.existsSync(syncedPath)) {
+  // The public changelog must never come from an old synced engineering log.
+  if (filename !== "CHANGELOG.md" && fs.existsSync(syncedPath)) {
     markdown = fs.readFileSync(syncedPath, "utf8");
     source = "synced";
   } else if (fs.existsSync(fallbackPath)) {

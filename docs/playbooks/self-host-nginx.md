@@ -1,6 +1,6 @@
 # 自有服务器 nginx 部署
 
-1. 在构建环境运行 `npm run build`，将生成的 `out/` 内容复制到服务器的站点目录，例如 `/var/www/universe-keyboard/`。
+1. 在全新、未含 `content/synced/` 的构建检出中，先确认 `/nonexistent` 不存在，再运行 `MAIN_REPO_PATH=/nonexistent npm run build`。若这些条件不成立，停止并使用全新检出；构建完成后检查中英文隐私政策和更新日志的导出内容，再将 `out/` 内容复制到服务器的站点目录，例如 `/var/www/universe-keyboard/`。
 2. 将 `keyboard.unknownuniverse.cn` 的 DNS 指向服务器，并在配置中替换以下证书路径占位符。按证书签发机构的流程取得并续期证书，不要将密钥提交到仓库。
 3. 检查配置并重载 nginx：`nginx -t`，然后 `systemctl reload nginx`。
 
