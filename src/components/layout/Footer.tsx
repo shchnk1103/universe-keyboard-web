@@ -57,6 +57,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/support" className="hover:text-foreground">
+                {nav("support")}
+              </Link>
+            </li>
+            <li>
               <a
                 href={siteConfig.githubUrl}
                 target="_blank"
@@ -88,6 +93,11 @@ export function Footer() {
           <p>
             © {year} {siteConfig.name}. {t("rights")}
           </p>
+          {siteConfig.icpNumber && (
+            <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+              {siteConfig.icpNumber}
+            </a>
+          )}
           <p>{t("syncNote")}</p>
         </Container>
       </div>

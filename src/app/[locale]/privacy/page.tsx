@@ -26,7 +26,9 @@ export default async function PrivacyPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("privacy");
-  const { markdown } = readSyncedMarkdown("PRIVACY_POLICY.md");
+  const { markdown } = readSyncedMarkdown(
+    locale === "zh" ? "PRIVACY_POLICY.zh.md" : "PRIVACY_POLICY.md",
+  );
 
   return (
     <div className="pb-20 pt-14 sm:pb-28 sm:pt-20">

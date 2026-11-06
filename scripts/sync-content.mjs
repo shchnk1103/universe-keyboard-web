@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Copy privacy policy + changelog from the Universe Keyboard main repo
+ * Copy the privacy policy from the Universe Keyboard main repo
  * into content/synced/ for the marketing site build.
  *
  * Default main repo path: ../Universe Keyboard (sibling of UniverseWeb)
@@ -24,12 +24,8 @@ const files = [
     to: path.join(outDir, "PRIVACY_POLICY.md"),
     transform: (s) => toPublicPrivacyMarkdown(s),
   },
-  {
-    from: path.join(mainRepo, "CHANGELOG.md"),
-    to: path.join(outDir, "CHANGELOG.md"),
-    // Keep the public changelog readable; full history stays in the main repo.
-    transform: (s) => truncateChangelog(s, 12),
-  },
+  // The main repo CHANGELOG is an internal engineering log; the public changelog
+  // page is maintained only in content/fallback/CHANGELOG.md.
 ];
 
 function toPublicPrivacyMarkdown(markdown) {
@@ -49,29 +45,6 @@ function toPublicPrivacyMarkdown(markdown) {
     ].join("\n"),
   );
   return text.replace(/\n{3,}/g, "\n\n").trim() + "\n";
-}
-
-function truncateChangelog(text, maxHeadings) {
-  const lines = text.split(/\r?\n/);
-  let headings = 0;
-  const out = [];
-  for (const line of lines) {
-    if (/^##\s+/.test(line)) {
-      headings += 1;
-      if (headings > maxHeadings) {
-        out.push("");
-        out.push(
-          "---",
-          "",
-          "_… truncated. The full changelog is in the project repository._",
-          "",
-        );
-        break;
-      }
-    }
-    out.push(line);
-  }
-  return out.join("\n");
 }
 
 function ensureDir(dir) {

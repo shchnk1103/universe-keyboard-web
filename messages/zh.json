@@ -12,7 +12,9 @@
     "aboutTitle": "关于 — Universe Keyboard",
     "aboutDescription": "项目背景、开源许可与致谢。",
     "changelogTitle": "更新日志 — Universe Keyboard",
-    "changelogDescription": "产品与工程更新记录。"
+    "changelogDescription": "产品与工程更新记录。",
+    "supportTitle": "支持 — Universe Keyboard",
+    "supportDescription": "获取 Universe Keyboard 的帮助与反馈方式。"
   },
   "nav": {
     "features": "功能",
@@ -21,7 +23,8 @@
     "about": "关于",
     "privacy": "隐私",
     "download": "即将上架",
-    "github": "GitHub"
+    "github": "GitHub",
+    "support": "支持"
   },
   "footer": {
     "tagline": "接近原生的中文输入。",
@@ -214,5 +217,11 @@
     "comingSoon": "即将推出",
     "placeholder": "占位",
     "language": "语言"
+  },
+  "support": {
+    "title": "支持",
+    "subtitle": "如需帮助或提供反馈，请通过电子邮件联系我们。",
+    "guide": "上手指南",
+    "privacy": "隐私政策"
   }
 }

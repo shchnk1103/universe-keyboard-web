@@ -13,7 +13,8 @@ export function readSyncedMarkdown(filename: string): {
   let markdown: string | null = null;
   let source: "synced" | "fallback" = "fallback";
 
-  if (fs.existsSync(syncedPath)) {
+  // The public changelog must never come from an old synced engineering log.
+  if (filename !== "CHANGELOG.md" && fs.existsSync(syncedPath)) {
     markdown = fs.readFileSync(syncedPath, "utf8");
     source = "synced";
   } else if (fs.existsSync(fallbackPath)) {
@@ -25,19 +26,21 @@ export function readSyncedMarkdown(filename: string): {
     markdown = "This page is not available yet.\n";
   }
 
-  if (filename === "PRIVACY_POLICY.md") {
-    markdown = toPublicPrivacyMarkdown(markdown);
+  if (filename === "PRIVACY_POLICY.md" || filename === "PRIVACY_POLICY.zh.md") {
+    markdown = toPublicPrivacyMarkdown(markdown, filename === "PRIVACY_POLICY.zh.md");
   }
 
   return { markdown, source };
 }
 
 /** Strip repository-process notes so the published policy reads as a public document. */
-export function toPublicPrivacyMarkdown(markdown: string): string {
+export function toPublicPrivacyMarkdown(markdown: string, isChinese = false): string {
   let text = markdown.replace(/\r\n/g, "\n");
 
   text = text.replace(/^>\s*\*\*Status:\*\*.+\n?/gim, "");
-  text = text.replace(
+  text = text.replace(/^>\s*\*\*状态[：:]\*\*.*\n?/gim, "");
+  if (!isChinese) {
+    text = text.replace(
     /follow their corresponding in-app controls and repository product contracts\./g,
     "follow the corresponding in-app controls.",
   );
@@ -50,6 +53,8 @@ export function toPublicPrivacyMarkdown(markdown: string): string {
       "",
     ].join("\n"),
   );
+
+  }
 
   return text.replace(/\n{3,}/g, "\n\n").trim() + "\n";
 }
