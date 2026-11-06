@@ -12,7 +12,9 @@
     "aboutTitle": "About — Universe Keyboard",
     "aboutDescription": "Project background, licenses, and credits.",
     "changelogTitle": "Changelog — Universe Keyboard",
-    "changelogDescription": "Product and engineering updates."
+    "changelogDescription": "Product and engineering updates.",
+    "supportTitle": "Support — Universe Keyboard",
+    "supportDescription": "Get help and contact Universe Keyboard."
   },
   "nav": {
     "features": "Features",
@@ -21,7 +23,8 @@
     "about": "About",
     "privacy": "Privacy",
     "download": "Coming soon",
-    "github": "GitHub"
+    "github": "GitHub",
+    "support": "Support"
   },
   "footer": {
     "tagline": "Chinese input that feels native.",
@@ -214,5 +217,11 @@
     "comingSoon": "Coming soon",
     "placeholder": "Placeholder",
     "language": "Language"
+  },
+  "support": {
+    "title": "Support",
+    "subtitle": "For help or feedback, contact us by email.",
+    "guide": "Get started",
+    "privacy": "Privacy policy"
   }
 }
